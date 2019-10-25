@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Resumo dos Processos</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <h1>Resumo dos Processos</h1>
+        {% for processo in processos %}
+            <ul>
+                <li><p>Numero do processo: {{ processo.numero }}.</p></li>
+                <li><p>Funcionario: {{ processo.funcionario }}</p></li>
+                <li><p>Data: {{ processo.data_criacao }}</p></li>
+            </ul>
+        {% endfor %}
+    </body>
+</html>

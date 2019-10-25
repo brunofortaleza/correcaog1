@@ -6,6 +6,6 @@ def processo_resumo(request):
     return render(request, 'app_processo/resumo.html', {'total': total})
 
 def lista_processo(request):
-    numero = Processo.numero
-    funcionario = Processo.funcionario
-    data_criacao = Processo.data_criacao
+    processos = Processo.objects.all()
+    return render(request, 'app_processo/lista_processo.html', {'processos': processos})
+
